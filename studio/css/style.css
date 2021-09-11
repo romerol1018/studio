@@ -1,0 +1,180 @@
+/*declarar constantes de diseño pasra las fuentes colores y recursos*/
+:root{
+--textos:'Lato', sans-serif;
+--titulos:'Montserrat', sans-serif;
+--colorfondo:rgb(241, 229, 229) !important;
+--colorheader:rgba(44,34,34,.6);
+--colorfooter:black;
+
+}
+/*estilos para el body*/
+/*controla el desbordamiento de imagen el * sirve para aplicar a todos los elemntos entro del body*/
+*{
+    box-sizing: border-box;
+}
+
+
+
+body{
+    font-family:var(--textos);
+    background-color: var(--colorfondo);
+    font-size:1.2rem;/*rem representa 10 px*/
+    text-align:justify;
+    
+}
+/*estilos para el titulo principal*/
+h1,h2,h3,h4{
+    font-size:var(--titulos);
+    font-weight: bold;
+    font-size: 3.5rem;
+    text-align: center;
+    color:var(--colorfooter)
+}
+h2,h3{
+    font-size:1.8rem !important;
+}
+.home-wrapper{
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('../images/background.jpg');
+    background-size: cover;
+    color: var(--colorfondo)
+}
+header{
+    position: fixed;/* fixed fija el elemento deja la barra superior fija*/
+    width: 100%;
+    background-color: rgb(48,48,48,0.623);
+    padding: 10px 0;
+}
+header img{
+    width: 200px;
+}
+.container{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header nav{
+    float: right;
+    margin-top: 10px;
+}
+header nav a {
+    color: var(--colorfondo);
+    font-weight: bold;
+    text-decoration:none;
+    margin-left: 10px;
+    padding: 6px 15px;
+    border-radius: 3px;
+   
+}
+header nav a.active{
+    background-color: rgb(151, 151, 8);
+}
+/*home*/
+/*los identificadores id se representan por el simbolo numeral # y el nombre del id*/
+#home{
+    text-align: center;
+    padding: 200px 0 150px;
+}
+#home h1{
+    color: var(--colorfondo);
+    margin-bottom:40px;
+    line-height: 1.2;
+}
+#home p{
+    font-size:1.4rem;
+    margin-top: 40px;
+
+}
+#home .divider{
+    width: 90px;
+    border-top:5px solid rgb(151, 151, 8) ;
+    margin: 0 auto;
+}
+/*ajustando iconos*/
+#home .social{
+    margin-top:80px;
+}
+#home .social a{/*padre hijo y nieto*/
+    color:var(--colorfondo);
+    display: inline-block;
+    border-radius: 50%;
+    background-color: black;
+    font-size:40px;
+    font-weight: bold;
+    height:50px;
+    width: 50px;
+    margin-right:10px ;
+    line-height: 50px;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+}
+#home .social a:hover{
+background-color: rgb(151, 151, 8)  ;
+}
+
+
+/*secciones*/
+section{
+    padding: 80px;
+}
+section h2{
+    font-size:32px;
+    text-align: center;
+    margin-bottom:70px;
+}
+p{
+    text-align: justify;
+}
+/*servicios*/
+#servicios .box{
+    display: inline-block;
+    width:33%; /*el ancho total es de 100% , se desea dividir en tres columnas , se divide el resultado del 33%*/
+    padding:4px;
+}
+#servicios .box img{
+    padding-left: 30%;
+    padding-bottom: 10%;
+}
+/*portafolio*/
+
+#portafolio .box{
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    margin: 1.5%;
+    padding:8px;
+}
+#portafolio .box img{
+    width: 100%;
+}
+/*contacto*/
+#contacto{
+    background-image: url('../images/map-image.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    background-color: rgb(36, 35, 35);
+}
+#contacto h2{
+    color:var(--colorfondo) ;
+}
+#contacto input,textarea,select{
+    width: 400px;
+    border-radius: 10px;
+    font-size: 14px;
+    padding:10px 10px;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+/*footer*/
+footer{
+    width: 100%;
+    background-color: var(--colorfooter);
+    text-align: center;
+    color:var(--colorfondo);
+    font-size:1.2rem;
+    padding:10px;
+}
